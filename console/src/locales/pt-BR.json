@@ -697,12 +697,12 @@
     "requestSessionId": "Request Session ID",
     "requestUserId": "Request Usuario ID",
     "dispatchChannel": "Target Channel",
-    "dispatchTargetUserId": "Target Usuario ID",
-    "dispatchTargetSessionId": "Target Session ID",
-    "dispatchMode": "Delivery Modo",
-    "runtimeMaxConcurrency": "Max Concurrency",
-    "runtimeTimeoutSeconds": "Tempo limite (seconds)",
-    "runtimeMisfireGraceSeconds": "Misfire Grace (seconds)",
+    "dispatchTargetUserId": "ID de Usuário Alvo de Despacho",
+    "dispatchTargetSessionId": "ID de Sessão Alvo de Despacho",
+    "dispatchMode": "Modo de Despacho",
+    "runtimeMaxConcurrency": "Concorrência Máxima de Tempo de Execução",
+    "runtimeTimeoutSeconds": "Tempo Limite de Tempo de Execução (Segundos)",
+    "runtimeMisfireGraceSeconds": "Tolerância de Falha de Tempo de Execução (Segundos)",
     "idTooltip": "System-generated, non-editable, unique UUID assigned at task creation.",
     "nameTooltip": "A friendly name to help you identify this job.",
     "cronTooltip": "Define when the task should run",
@@ -725,7 +725,8 @@
     "misfireGraceSecondsTooltip": "Grace period for missed executions. If a job misses its scheduled time by more than this, it won't run.",
     "executeNowTitle": "Execute Task Agora",
     "executeNowContent": "Are you sure you want to execute \"{{name}}\" now?",
-    "executeNowConfirm": "Execute Agora"
+    "executeNowConfirm": "Execute Agora",
+    "dispatchType": "Tipo de Despacho"
   },
   "channels": {
     "title": "Canais",
