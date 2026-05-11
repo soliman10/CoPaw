@@ -45,27 +45,27 @@ export function SessionDrawer({
       <Form form={form} layout="vertical" onFinish={onSubmit}>
         <Form.Item
           name="name"
-          label="name"
-          rules={[{ required: false, message: "Please input name" }]}
+          label={t("common.name")}
+          rules={[{ required: false, message: t("sessions.pleaseInputName") }]}
         >
-          <Input placeholder="Session name" />
+          <Input placeholder={t("sessions.sessionNamePlaceholder")} />
         </Form.Item>
 
         {editingSession && (
           <>
-            <Form.Item label="id">
+            <Form.Item label="ID">
               <Input value={editingSession.id} disabled />
             </Form.Item>
 
-            <Form.Item label="session_id">
+            <Form.Item label="Session ID">
               <Input value={editingSession.session_id} disabled />
             </Form.Item>
 
-            <Form.Item label="user_id">
+            <Form.Item label="User ID">
               <Input value={editingSession.user_id} disabled />
             </Form.Item>
 
-            <Form.Item label="channel">
+            <Form.Item label={t("common.channel")}>
               <Input value={editingSession.channel} disabled />
             </Form.Item>
           </>
