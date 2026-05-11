@@ -17,7 +17,7 @@ interface ColumnHandlers {
 const toUTCTime = (ts: string | null | undefined): number => {
   if (!ts) return 0;
   const normalized =
-    /[Z+\-]\d{2}:?\d{2}$/.test(ts) || ts.endsWith("Z") ? ts : ts + "Z";
+    /[Z+-]\d{2}:?\d{2}$/.test(ts) || ts.endsWith("Z") ? ts : ts + "Z";
   return new Date(normalized).getTime();
 };
 
@@ -34,25 +34,25 @@ export const createColumns = (
       width: 250,
     },
     {
-      title: "Name",
+      title: handlers.t("common.name"),
       dataIndex: "name",
       key: "name",
       width: 200,
     },
     {
-      title: "SessionID",
+      title: "Session ID",
       dataIndex: "session_id",
       key: "session_id",
       width: 180,
     },
     {
-      title: "UserID",
+      title: "User ID",
       dataIndex: "user_id",
       key: "user_id",
       width: 150,
     },
     {
-      title: "Channel",
+      title: handlers.t("common.channel"),
       dataIndex: "channel",
       key: "channel",
       width: 120,
@@ -61,7 +61,7 @@ export const createColumns = (
       ),
     },
     {
-      title: "CreatedAt",
+      title: handlers.t("common.createdAt"),
       dataIndex: "created_at",
       key: "created_at",
       width: 180,
@@ -70,7 +70,7 @@ export const createColumns = (
         toUTCTime(a.created_at) - toUTCTime(b.created_at),
     },
     {
-      title: "UpdatedAt",
+      title: handlers.t("common.updatedAt"),
       dataIndex: "updated_at",
       key: "updated_at",
       width: 180,
@@ -80,7 +80,7 @@ export const createColumns = (
       defaultSortOrder: "descend",
     },
     {
-      title: "Action",
+      title: handlers.t("common.action"),
       key: "action",
       width: 180,
       fixed: "right",

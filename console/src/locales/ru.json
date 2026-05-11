@@ -510,12 +510,12 @@
     "requestUserId": "ID пользователя запроса",
     "dispatchChannel": "Целевой канал",
     "dispatchTargetUserId": "ID целевого пользователя",
-    "dispatchTargetSessionId": "ID целевой сессии",
-    "dispatchMode": "Режим доставки",
+    "dispatchTargetSessionId": "ID целевого сеанса",
+    "dispatchMode": "Режим диспетчеризации",
     "runtimeShareSession": "Общая сессия",
-    "runtimeMaxConcurrency": "Макс. параллельность",
-    "runtimeTimeoutSeconds": "Таймаут (секунды)",
-    "runtimeMisfireGraceSeconds": "Льготный период пропуска (секунды)",
+    "runtimeMaxConcurrency": "Макс. количество одновременных выполнений",
+    "runtimeTimeoutSeconds": "Тайм-аут выполнения (секунды)",
+    "runtimeMisfireGraceSeconds": "Льготный период при пропуске запуска (секунды)",
     "idTooltip": "Генерируемый системой, нередактируемый уникальный UUID, присваиваемый при создании задачи.",
     "nameTooltip": "Понятное имя, чтобы вам было проще найти эту задачу.",
     "cronTooltip": "Определите, когда задача должна запускаться",
@@ -539,7 +539,8 @@
     "misfireGraceSecondsTooltip": "Льготный период для пропущенных запусков. Если задача пропустила время запуска больше чем на это значение, она не будет выполнена.",
     "executeNowTitle": "Выполнить задачу сейчас",
     "executeNowContent": "Вы уверены, что хотите выполнить «{{name}}» прямо сейчас?",
-    "executeNowConfirm": "Выполнить сейчас"
+    "executeNowConfirm": "Выполнить сейчас",
+    "dispatchType": "Тип диспетчеризации"
   },
   "channels": {
     "title": "Каналы",
