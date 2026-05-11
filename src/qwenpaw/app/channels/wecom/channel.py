@@ -756,7 +756,7 @@ class WecomChannel(BaseChannel):
                 )
                 or "media"
             )
-            url_hash = hashlib.md5(url.encode()).hexdigest()[:8]
+            url_hash = hashlib.sha256(url.encode()).hexdigest()[:8]
             path = self._media_dir / f"wecom_{url_hash}_{safe_name}"
             path.write_bytes(data)
             return str(path)

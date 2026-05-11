@@ -584,7 +584,7 @@ ORDER BY m.ROWID ASC
     ) -> Optional[str]:
         """Handle remote HTTP/HTTPS URLs."""
         try:
-            url_hash = hashlib.md5(url.encode()).hexdigest()[:16]
+            url_hash = hashlib.sha256(url.encode()).hexdigest()[:16]
             ext = self._get_file_extension(content_type, filename_hint)
             safe_basename = self._sanitize_filename(filename_hint)
             safe_filename = f"{safe_basename}_{url_hash}{ext}"
@@ -658,7 +658,7 @@ ORDER BY m.ROWID ASC
                     )
                     return None
 
-                url_hash = hashlib.md5(b64_data.encode()).hexdigest()[:16]
+                url_hash = hashlib.sha256(b64_data.encode()).hexdigest()[:16]
                 safe_basename = self._sanitize_filename(filename_hint)
                 safe_filename = f"{safe_basename}_{url_hash}{ext}"
                 local_path = str(self._media_dir / safe_filename)
